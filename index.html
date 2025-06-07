@@ -1,1 +1,103 @@
-hello world
+
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard</title>
+  <style>
+    /* Reset some default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f8;
+      display: flex;
+      min-height: 100vh;
+      color: #333;
+    }
+
+    /* Sidebar container */
+    .sidebar {
+      background-color: #2c3e50;
+      width: 220px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    /* Button styles */
+    .sidebar button {
+      background-color: #34495e;
+      color: #ecf0f1;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: left;
+    }
+
+    .sidebar button:hover,
+    .sidebar button:focus {
+      background-color: #1abc9c;
+      outline: none;
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 30px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 600px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+      }
+      .sidebar button {
+        flex: 1 0 auto;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar" aria-label="Navigasi dashboard">
+    <button type="button" onclick="navigateTo('list-produk.html')" aria-label="Lihat List Produk">List Produk</button>
+    <button type="button" onclick="navigateTo('profil.html')" aria-label="Lihat Profil">Profil</button>
+    <button type="button" onclick="navigateTo('setting.html')" aria-label="Pengaturan">Setting</button>
+    <button type="button" onclick="navigateTo('laporan.html')" aria-label="Laporan">Laporan</button>
+    <button type="button" onclick="navigateTo('bantuan.html')" aria-label="Bantuan">Bantuan</button>
+  </nav>
+
+  <main class="main-content" role="main">
+    <h1>Selamat Datang di Dashboard</h1>
+    <p>Pilih menu di sebelah kiri untuk berpindah halaman.</p>
+  </main>
+
+  <script>
+    function navigateTo(url) {
+      // Ganti lokasi ke halaman yang dipilih
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
+```
